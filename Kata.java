@@ -56,6 +56,22 @@ public class Kata {
         return result.toString();
     }
 
+    public static String bmi(double weight, double height) {
+        double bodymass = weight / Math.pow(height, 2);
+        String result = "";
+        if (bodymass <= 18.5) {
+            result = "Underweight";
+        } else if (bodymass <= 25.0) {
+            result = "Normal";
+        } else if (bodymass <= 30.0) {
+            result = "Overweight";
+        } else if (bodymass > 30.0) {
+            result = "Obese";
+        }
+        return result;
+    }
+}
+
 
 }
 
