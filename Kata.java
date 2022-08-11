@@ -45,6 +45,18 @@ public class Kata {
         }
         return result;
     }
+
+    public static String repeatStr(final int repeat, final String string) {
+        StringBuilder result = new StringBuilder();
+        if (repeat == 0) {
+            return "";
+        } else {
+            result.append(String.valueOf(string).repeat(Math.max(0, repeat)));
+        }
+        return result.toString();
+    }
+
+
 }
 
 
