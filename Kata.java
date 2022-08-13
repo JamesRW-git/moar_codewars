@@ -19,6 +19,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Kata {
+    public static void main(String[] args) {
+
+    }
+
     public static String findNeedle(Object[] haystack) {
         for (int i = 0; i < haystack.length; i++) {
             if (haystack[i] == "needle") {
@@ -100,9 +104,23 @@ public class Kata {
         return String.format("Hello, %s how are you doing today?", name);
     }
 
+    public static int calculateYears(double principal, double interest,  double tax, double desired) {
+        int years = 0;
+        if(principal < desired) {
+            do {
+                System.out.println("Desired amount: " + desired);
+                System.out.println("Principal at start of year: " + principal);
+                System.out.println("Interest payment: " + (principal * interest));
+                System.out.println("Tax: " + ((principal * interest) * tax));
+                System.out.println("Principal at end of year: " + principal);
+                principal += (principal * interest) - (principal * interest) * tax;
+                years++;
+                System.out.println("Year: " + years);
+            } while (principal < desired);
+        }
+        return years;
+    }
 }
-
-
 
 
 
