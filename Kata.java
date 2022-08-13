@@ -15,8 +15,8 @@
 //    }
 //}
 
-import java.sql.Array;
 import java.util.Arrays;
+import java.util.List;
 
 public class Kata {
     public static String findNeedle(Object[] haystack) {
@@ -70,6 +70,21 @@ public class Kata {
         }
         return result;
     }
+
+    public static boolean check(Object[] a, Object x) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == x) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean check2(Object[] a, Object x) {
+        return Arrays.asList(a).contains(x);
+    }
+
+
 }
 
 
