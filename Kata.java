@@ -15,12 +15,14 @@
 //    }
 //}
 
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Kata {
     public static void main(String[] args) {
-
+        countBy(1, 10);
     }
 
     public static String findNeedle(Object[] haystack) {
@@ -119,6 +121,17 @@ public class Kata {
             } while (principal < desired);
         }
         return years;
+    }
+
+    public static int[] countBy(int x, int n){
+        int workingNum = x;
+        int newArr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println(workingNum);
+            newArr[i] = workingNum;
+            workingNum += x;
+        }
+        return newArr;
     }
 }
 
